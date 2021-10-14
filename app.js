@@ -32,9 +32,9 @@ bot.command("start", (ctx) => {
 
 bot.hears("hello", async (ctx) => {
   console.log(ctx.from);
-  //const user = new User({ userId: ctx.from.id, name: ctx.from.first_name });
+  const user = new User({ userId: ctx.from.id, name: ctx.from.first_name });
 
-  //const createdUser = await user.save();
+  const createdUser = await user.save();
 
   let userMessage = `How many vaccines shots have been administered to you? 1. Not vaccinated, 2. One, 3. Two`;
   let userMessage1 = `Please Enter your Age Slot? a. If Age less than 18 b. If Age is in between 18-45 c. If Age is above 45`;
